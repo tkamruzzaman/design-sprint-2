@@ -1,0 +1,123 @@
+using System.Collections;
+using UnityEngine;
+
+public class ComicPanelManager : MonoBehaviour
+{
+    public static ComicPanelManager Instance;
+
+    [SerializeField] ComicPanel[] comicPanels;
+    public Color[] comicBackgroundColors;
+    private int currentActivePanel = 0;
+    private int completedPanelCount = 0;
+
+    [Header("Camera Settings")]
+    [SerializeField] float zoomedInSize = 3f;
+    [SerializeField] float zoomedOutSize = 8f;
+    [SerializeField] float zoomDuration = 1f;
+
+    void Awake()
+    {
+        Instance = this;
+        comicPanels = transform.GetComponentsInChildren<ComicPanel>();
+    }
+
+    void Start()
+    {
+        for (int i = 0; i < comicPanels.Length; i++)
+        {
+            comicPanels[i].panelNumber = i;
+            comicPanels[i].Inactive();
+        }
+
+        if (comicPanels.Length > 0)
+        {
+            comicPanels[0].Active();
+        }
+
+        // Set up camera controller
+        if (ComicCameraController.Instance != null)
+        {
+            ComicCameraController.Instance.SetZoomParameters(zoomedInSize, zoomedOutSize, zoomDuration);
+        }
+    }
+
+    public void PanelCompleted(int panelNumber)
+    {
+        completedPanelCount++;
+
+        // Check if all panels are completed
+        if (completedPanelCount >= comicPanels.Length)
+        {
+            StartCoroutine(AllPanelsCompleted());
+        }
+        else
+        {
+            // Activate next panel
+            ActivateNextPanel(panelNumber);
+        }
+    }
+
+    public void ActivateNextPanel(int completedPanelNumber)
+    {
+        int nextPanel = completedPanelNumber + 1;
+        if (nextPanel < comicPanels.Length)
+        {
+            //comicPanels[nextPanel].Active();
+            //currentActivePanel = nextPanel;
+            // Wait a moment before activating next panel
+            StartCoroutine(ActivateNextPanelDelayed(nextPanel));
+        }
+    }
+
+    private IEnumerator ActivateNextPanelDelayed(int nextPanelIndex)
+    {
+        yield return new WaitForSeconds(1f); // Brief pause between panels
+
+        comicPanels[nextPanelIndex].Active();
+        currentActivePanel = nextPanelIndex;
+    }
+
+    private IEnumerator AllPanelsCompleted()
+    {
+        Debug.Log("All panels completed!");
+
+        // Wait a moment before zooming out
+        yield return new WaitForSeconds(2f);
+
+        // Zoom out to show all panels
+        ComicCameraController.Instance.ZoomOut();
+
+        // Optional: Add completion effects, UI, or restart options here
+        yield return new WaitForSeconds(zoomDuration + 1f);
+
+        // You could add completion UI, sound effects, or restart logic here
+        OnAllPanelsComplete();
+    }
+
+    private void OnAllPanelsComplete()
+    {
+        Debug.Log("All panels completed!");
+        // any completion logic
+        // Show completion UI
+        Debug.Log("Comic story complete!");
+    }
+
+    //  Reset function for replaying
+    public void ResetComic()
+    {
+        completedPanelCount = 0;
+        currentActivePanel = 0;
+
+        for (int i = 0; i < comicPanels.Length; i++)
+        {
+            comicPanels[i].Inactive();
+        }
+
+        if (comicPanels.Length > 0)
+        {
+            comicPanels[0].Active();
+        }
+
+        ComicCameraController.Instance.ZoomOut();
+    }
+}
