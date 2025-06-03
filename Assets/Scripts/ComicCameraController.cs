@@ -7,7 +7,7 @@ public class ComicCameraController : MonoBehaviour
     
     [SerializeField] Camera mainCamera;
     [SerializeField] float zoomedInSize = 3f;
-    [SerializeField] float zoomedOutSize = 8f;
+    [SerializeField] float zoomedOutSize = 5f;
     [SerializeField] public float zoomDuration = 1f;
     [SerializeField] Ease zoomEase = Ease.OutCubic;
     
@@ -59,13 +59,6 @@ public class ComicCameraController : MonoBehaviour
         zoomSequence.Append(mainCamera.transform.DOMove(originalPosition, zoomDuration).SetEase(zoomEase));
         zoomSequence.Join(DOTween.To(() => mainCamera.orthographicSize, 
             x => mainCamera.orthographicSize = x, zoomedOutSize, zoomDuration).SetEase(zoomEase));
-    }
-
-    public void SetZoomParameters(float zoomedIn, float zoomedOut, float duration)
-    {
-        zoomedInSize = zoomedIn;
-        zoomedOutSize = zoomedOut;
-        zoomDuration = duration;
     }
 
     public bool IsZoomedIn => isZoomedIn;

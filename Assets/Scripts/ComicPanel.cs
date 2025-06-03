@@ -100,6 +100,23 @@ public class ComicPanel : MonoBehaviour
         // Activate next panel
         //ComicPanelManager.Instance.ActivateNextPanel(panelNumber);
         // Tell manager this panel is complete
+        //ComicPanelManager.Instance.PanelCompleted(panelNumber);
+        // Start completion sequence with zoom out
+        StartCoroutine(CompleteWithZoomOut());
+    }
+
+    private IEnumerator CompleteWithZoomOut()
+    {
+        // Zoom out to show all panels
+        ComicCameraController.Instance.ZoomOut();
+        
+        // Wait for zoom out to complete
+        yield return new WaitForSeconds(ComicCameraController.Instance.zoomDuration);
+        
+        // Brief pause to show the overview
+        yield return new WaitForSeconds(0.5f);
+        
+        // Tell manager this panel is complete
         ComicPanelManager.Instance.PanelCompleted(panelNumber);
     }
 
@@ -122,7 +139,7 @@ public class ComicPanel : MonoBehaviour
         }
     }
 
-    // Manual completion trigger (for testing or manual control)
+    //  completion testing 
     public void ForceComplete()
     {
         if (isPlayingContent)
