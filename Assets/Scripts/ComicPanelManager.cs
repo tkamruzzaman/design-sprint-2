@@ -70,10 +70,10 @@ public class ComicPanelManager : MonoBehaviour
         yield return new WaitForSeconds(2f);
 
         // Zoom out to show all panels
-        ComicCameraController.Instance.ZoomOut();
+        CameraController.Instance.ZoomOut();
 
         // Add completion effects, UI, or restart options here
-        yield return new WaitForSeconds(ComicCameraController.Instance. zoomDuration + 1f);
+        yield return new WaitForSeconds(CameraController.Instance. zoomDuration + 1f);
 
         // You could add completion UI, sound effects, or restart logic here
         OnAllPanelsComplete();
@@ -103,6 +103,6 @@ public class ComicPanelManager : MonoBehaviour
             comicPanels[0].Active();
         }
 
-        ComicCameraController.Instance.ZoomOut();
+        CameraController.Instance.ZoomOut();
     }
 }

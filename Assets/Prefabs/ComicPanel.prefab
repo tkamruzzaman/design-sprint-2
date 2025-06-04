@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3359196583613828611}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
@@ -40,10 +40,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 849358299317686805}
-  - component: {fileID: 2911464498197380820}
   - component: {fileID: 5805066884695196013}
   - component: {fileID: 1670969907149410123}
-  m_Layer: 0
+  - component: {fileID: 2911464498197380820}
+  m_Layer: 6
   m_Name: ComicPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66,33 +66,6 @@ Transform:
   - {fileID: 3359196583613828611}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2911464498197380820
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5007190704058219788}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bdc6331a76ad0478cb55bed381157d30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  panelNumber: 0
-  backgroundSR: {fileID: 5805066884695196013}
-  interactableObjects: []
-  panelAnimator: {fileID: 0}
-  dialogueSystem: {fileID: 0}
-  onPanelActivated:
-    m_PersistentCalls:
-      m_Calls: []
-  onContentStarted:
-    m_PersistentCalls:
-      m_Calls: []
-  onPanelCompleted:
-    m_PersistentCalls:
-      m_Calls: []
-  spawnTransform: {fileID: 3359196583613828611}
 --- !u!212 &5805066884695196013
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -194,3 +167,31 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2911464498197380820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5007190704058219788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdc6331a76ad0478cb55bed381157d30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelNumber: 0
+  backgroundSR: {fileID: 5805066884695196013}
+  interactableObjects: []
+  panelAnimator: {fileID: 0}
+  dialogueSystem: {fileID: 0}
+  isPlayingContent: 0
+  onPanelActivated:
+    m_PersistentCalls:
+      m_Calls: []
+  onContentStarted:
+    m_PersistentCalls:
+      m_Calls: []
+  onPanelCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+  spawnTransform: {fileID: 3359196583613828611}

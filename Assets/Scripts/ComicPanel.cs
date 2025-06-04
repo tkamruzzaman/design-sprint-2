@@ -52,7 +52,7 @@ public class ComicPanel : MonoBehaviour
         {
             isPlayingContent = true;
             // Zoom camera to this panel
-            ComicCameraController.Instance.ZoomToPanel(this);
+            CameraController.Instance.ZoomToPanel(this);
             onContentStarted.Invoke();
             //StartCoroutine(PlayContent());
              // Wait for zoom to complete before starting content
@@ -62,7 +62,7 @@ public class ComicPanel : MonoBehaviour
     private IEnumerator PlayPanelContentAfterZoom()
     {
         // Wait for zoom animation to complete
-        yield return new WaitForSeconds(ComicCameraController.Instance.zoomDuration);
+        yield return new WaitForSeconds(CameraController.Instance.zoomDuration);
 
         // Play animations
         if (panelAnimator != null)
@@ -108,10 +108,10 @@ public class ComicPanel : MonoBehaviour
     private IEnumerator CompleteWithZoomOut()
     {
         // Zoom out to show all panels
-        ComicCameraController.Instance.ZoomOut();
+        CameraController.Instance.ZoomOut();
         
         // Wait for zoom out to complete
-        yield return new WaitForSeconds(ComicCameraController.Instance.zoomDuration);
+        yield return new WaitForSeconds(CameraController.Instance.zoomDuration);
         
         // Brief pause to show the overview
         yield return new WaitForSeconds(0.5f);
