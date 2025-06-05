@@ -1,17 +1,22 @@
 using DG.Tweening;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Draging : MonoBehaviour
 {
+    public static Draging Instance;
     [SerializeField] bool isDraging;
     Vector3 initialScale;
     [SerializeField] float selectionScale = 1.1f;
     [SerializeField] SpriteRenderer playerSprite;
-    private ComicPanel currentPanel; // Track current panel
+    public ComicPanel currentPanel; // Track current panel move to comic panel manager??
 
+    [SerializeField] Sprite[] playerSprites;
+    readonly float[] playerSpriteScales = { 0.6f, 0.5f, 0.55f, 0.5f, 0.15f, 0.3f };
 
     void Awake()
     {
+        Instance = this;
         initialScale = playerSprite.transform.localScale;
     }
 
@@ -24,15 +29,22 @@ public class Draging : MonoBehaviour
     private void OnMouseUp()
     {
         isDraging = false;
-        playerSprite.transform.DOScale(initialScale, 0.2f);
 
-            // Snap to panel center if dropped on one
-        if (currentPanel != null && currentPanel.CurrentState == ComicPanelState.Active && 
-            !currentPanel.IsPlayingContent)
+        if (currentPanel != null
+        && currentPanel.CurrentState == ComicPanelState.Active
+        && !currentPanel.IsPlayingContent)
         {
-            // Snap to spawn position center
-            transform.DOMove(currentPanel.spawnTransform.position, 0.3f);
-            // Start the panel's content (animations + dialogue)
+            // Snap to spawn position
+            transform.DOMove(currentPanel.spawnTransform.position, 0.3f).OnComplete(() =>
+            {
+                playerSprite.transform.DOScale(playerSpriteScales[currentPanel.panelNumber], 0.2f);
+            });
+            playerSprite.DOFade(0, 0.2f).OnComplete(() =>
+            {
+                playerSprite.sprite = playerSprites[currentPanel.panelNumber];
+                playerSprite.DOFade(1, 0.2f);
+            });
+            // Start the panel's content (animations + dialogue) if any
             currentPanel.StartContent();
         }
     }
@@ -45,7 +57,7 @@ public class Draging : MonoBehaviour
         }
     }
 
-  void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         ComicPanel panel = collision.GetComponent<ComicPanel>();
         if (panel != null)
@@ -57,7 +69,7 @@ public class Draging : MonoBehaviour
             }
         }
     }
-    
+
     void OnTriggerExit2D(Collider2D collision)
     {
         ComicPanel panel = collision.GetComponent<ComicPanel>();
