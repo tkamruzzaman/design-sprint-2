@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 5805066884695196013}
   - component: {fileID: 1670969907149410123}
   - component: {fileID: 2911464498197380820}
+  - component: {fileID: 1759783767657294352}
   m_Layer: 6
   m_Name: ComicPanel
   m_TagString: Untagged
@@ -270,7 +271,7 @@ MonoBehaviour:
   panelNumber: 0
   backgroundSR: {fileID: 5805066884695196013}
   interactableObjects: []
-  panelAnimator: {fileID: 0}
+  panelAnimator: {fileID: 1759783767657294352}
   dialogueSystem: {fileID: 0}
   onPanelActivated:
     m_PersistentCalls:
@@ -282,3 +283,25 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   spawnTransform: {fileID: 3359196583613828611}
+--- !u!95 &1759783767657294352
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5007190704058219788}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

@@ -1,0 +1,405 @@
+fileFormatVersion: 2
+guid: 058988a22124842b49eca0397b59b142
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3781031283895915523
+    second: hand-drawn-bubbles-speech-collection_0
+  - first:
+      213: -7576409683650048230
+    second: hand-drawn-bubbles-speech-collection_1
+  - first:
+      213: -1947182010041530627
+    second: hand-drawn-bubbles-speech-collection_2
+  - first:
+      213: -1398070317996222196
+    second: hand-drawn-bubbles-speech-collection_3
+  - first:
+      213: 9223010531234882625
+    second: hand-drawn-bubbles-speech-collection_4
+  - first:
+      213: -3677707768219079057
+    second: hand-drawn-bubbles-speech-collection_5
+  - first:
+      213: 3864450011408905140
+    second: hand-drawn-bubbles-speech-collection_6
+  - first:
+      213: -8587088280686739463
+    second: hand-drawn-bubbles-speech-collection_7
+  - first:
+      213: 2633261093219601720
+    second: hand-drawn-bubbles-speech-collection_8
+  - first:
+      213: -8478393458331313826
+    second: hand-drawn-bubbles-speech-collection_9
+  - first:
+      213: 6647942418455101648
+    second: hand-drawn-bubbles-speech-collection_10
+  - first:
+      213: -1433522295037968921
+    second: hand-drawn-bubbles-speech-collection_11
+  - first:
+      213: -1275175941641288122
+    second: hand-drawn-bubbles-speech-collection_12
+  - first:
+      213: 8932303635269762400
+    second: hand-drawn-bubbles-speech-collection_13
+  - first:
+      213: 6903618190284387004
+    second: hand-drawn-bubbles-speech-collection_14
+  - first:
+      213: -4898109094285980997
+    second: hand-drawn-bubbles-speech-collection_15
+  - first:
+      213: 1719389320755912075
+    second: hand-drawn-bubbles-speech-collection_16
+  - first:
+      213: -7819014936753053078
+    second: hand-drawn-bubbles-speech-collection_17
+  - first:
+      213: 7757391129739273385
+    second: hand-drawn-bubbles-speech-collection_18
+  - first:
+      213: -819135181518321708
+    second: hand-drawn-bubbles-speech-collection_19
+  - first:
+      213: 2522905655631672525
+    second: hand-drawn-bubbles-speech-collection_20
+  - first:
+      213: 5408095763384960332
+    second: hand-drawn-bubbles-speech-collection_21
+  - first:
+      213: -4015373038390427414
+    second: hand-drawn-bubbles-speech-collection_22
+  - first:
+      213: -6379565315325312437
+    second: hand-drawn-bubbles-speech-collection_23
+  - first:
+      213: -8284130894845375144
+    second: hand-drawn-bubbles-speech-collection_24
+  - first:
+      213: 469804129142867933
+    second: hand-drawn-bubbles-speech-collection_25
+  - first:
+      213: 1840896811475246311
+    second: hand-drawn-bubbles-speech-collection_26
+  - first:
+      213: 8354698735218117789
+    second: hand-drawn-bubbles-speech-collection_27
+  - first:
+      213: -8233689509591404250
+    second: hand-drawn-bubbles-speech-collection_28
+  - first:
+      213: -7984331797554232217
+    second: hand-drawn-bubbles-speech-collection_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bubbles-speech-1
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 1360
+        width: 503
+        height: 478
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfbaebe7414178bc0800000000000000
+      internalID: -3781031283895915523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bubbles-speech-2
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 1362
+        width: 528
+        height: 424
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1f8535c88f2bd690800000000000000
+      internalID: -7576409683650048230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bubbles-speech-3
+      rect:
+        serializedVersion: 2
+        x: 1345
+        y: 1187
+        width: 600
+        height: 649
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df6817a47483af4e0800000000000000
+      internalID: -1947182010041530627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bubbles-speech-4
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 738
+        width: 541
+        height: 525
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14421f96637beff70800000000000000
+      internalID: 9223010531234882625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bubbles-speech-5
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 195
+        width: 466
+        height: 410
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e599a22f112b65a80800000000000000
+      internalID: -8478393458331313826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bubbles-speech-6
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 156
+        width: 441
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d08443486c324c50800000000000000
+      internalID: 6647942418455101648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bubbles-speech-7
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 179
+        width: 537
+        height: 454
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7edb8aa511b1b1ce0800000000000000
+      internalID: -1433522295037968921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: b526dbee3d06b439f887606d255a1a9c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      bubbles-speech-1: -3781031283895915523
+      bubbles-speech-2: -7576409683650048230
+      bubbles-speech-3: -1947182010041530627
+      bubbles-speech-4: 9223010531234882625
+      bubbles-speech-5: -8478393458331313826
+      bubbles-speech-6: 6647942418455101648
+      bubbles-speech-7: -1433522295037968921
+      hand-drawn-bubbles-speech-collection_12: -1275175941641288122
+      hand-drawn-bubbles-speech-collection_13: 8932303635269762400
+      hand-drawn-bubbles-speech-collection_14: 6903618190284387004
+      hand-drawn-bubbles-speech-collection_15: -4898109094285980997
+      hand-drawn-bubbles-speech-collection_16: 1719389320755912075
+      hand-drawn-bubbles-speech-collection_17: -7819014936753053078
+      hand-drawn-bubbles-speech-collection_18: 7757391129739273385
+      hand-drawn-bubbles-speech-collection_19: -819135181518321708
+      hand-drawn-bubbles-speech-collection_20: 2522905655631672525
+      hand-drawn-bubbles-speech-collection_21: 5408095763384960332
+      hand-drawn-bubbles-speech-collection_22: -4015373038390427414
+      hand-drawn-bubbles-speech-collection_23: -6379565315325312437
+      hand-drawn-bubbles-speech-collection_24: -8284130894845375144
+      hand-drawn-bubbles-speech-collection_25: 469804129142867933
+      hand-drawn-bubbles-speech-collection_26: 1840896811475246311
+      hand-drawn-bubbles-speech-collection_27: 8354698735218117789
+      hand-drawn-bubbles-speech-collection_28: -8233689509591404250
+      hand-drawn-bubbles-speech-collection_29: -7984331797554232217
+      hand-drawn-bubbles-speech-collection_3: -1398070317996222196
+      hand-drawn-bubbles-speech-collection_30: 1643334268
+      hand-drawn-bubbles-speech-collection_5: -3677707768219079057
+      hand-drawn-bubbles-speech-collection_6: 3864450011408905140
+      hand-drawn-bubbles-speech-collection_7: -8587088280686739463
+      hand-drawn-bubbles-speech-collection_8: 2633261093219601720
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

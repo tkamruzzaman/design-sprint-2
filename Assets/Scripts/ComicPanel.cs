@@ -67,7 +67,7 @@ public class ComicPanel : MonoBehaviour
         // Play animations
         if (panelAnimator != null)
         {
-            panelAnimator.SetTrigger("StartContent");
+            panelAnimator.SetTrigger("Play");
 
              // Wait for animation to complete
             AnimatorStateInfo stateInfo = panelAnimator.GetCurrentAnimatorStateInfo(0);

@@ -31,7 +31,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Panel_1_Anim_Controller
+  m_Name: Panel_6_Anim_Controller
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Play
@@ -87,7 +87,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Panel_1_Anim_Controller
+  m_Name: Panel_6_Anim_Controller
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -100,7 +100,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 42f7f6fac596a4beb9a73025bba425a2, type: 2}
+  m_Motion: {fileID: 7400000, guid: ca66ce0245a2a4a259616a916b3d2016, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -117,7 +117,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 4946285379244264453}
-    m_Position: {x: 380, y: 270, z: 0}
+    m_Position: {x: 380, y: 190, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 4060738768261517673}
     m_Position: {x: 380, y: 110, z: 0}
