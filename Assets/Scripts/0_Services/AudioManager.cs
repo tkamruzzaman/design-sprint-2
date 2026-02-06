@@ -11,13 +11,16 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip bgMusicClip;
     [SerializeField] private AudioClip buttonSFXClip;
 
+    public bool IsMusicOn = true;
+    public bool IsSFXOn = true;
+
 
     public void PlaySFX(AudioClip clip)
     {
         sfxSource.PlayOneShot(clip);
     }
 
-    public void PlayButtonSFX()
+    public void PlayButtonClick()
     {
         PlaySFX(buttonSFXClip);
     }

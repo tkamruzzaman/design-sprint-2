@@ -22,6 +22,7 @@ public class Draging : MonoBehaviour
 
     void OnMouseDown()
     {
+        print("On MouseDown");
         isDraging = true;
         playerSprite.transform.DOScale(initialScale * selectionScale, 0.5f);
     }
@@ -30,23 +31,21 @@ public class Draging : MonoBehaviour
     {
         isDraging = false;
 
-        if (currentPanel != null
-        && currentPanel.CurrentState == ComicPanelState.Active
-        && !currentPanel.IsPlayingContent)
+        if (currentPanel == null
+            || currentPanel.CurrentState != ComicPanelState.Active
+            || currentPanel.IsPlayingContent) return;
+        // Snap to spawn position
+        transform.DOMove(currentPanel.spawnTransform.position, 0.3f).OnComplete(() =>
         {
-            // Snap to spawn position
-            transform.DOMove(currentPanel.spawnTransform.position, 0.3f).OnComplete(() =>
-            {
-                playerSprite.transform.DOScale(playerSpriteScales[currentPanel.panelNumber], 0.2f);
-            });
-            playerSprite.DOFade(0, 0.2f).OnComplete(() =>
-            {
-                playerSprite.sprite = playerSprites[currentPanel.panelNumber];
-                playerSprite.DOFade(1, 0.2f);
-            });
-            // Start the panel's content (animations + dialogue) if any
-            currentPanel.StartContent();
-        }
+            playerSprite.transform.DOScale(playerSpriteScales[currentPanel.panelNumber], 0.2f);
+        });
+        playerSprite.DOFade(0, 0.2f).OnComplete(() =>
+        {
+            playerSprite.sprite = playerSprites[currentPanel.panelNumber];
+            playerSprite.DOFade(1, 0.2f);
+        });
+        // Start the panel's content (animations + dialogue) if any
+        currentPanel.StartContent();
     }
 
     void Update()

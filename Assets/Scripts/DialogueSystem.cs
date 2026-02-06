@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using TMPro;
+using UnityEngine.InputSystem;
 
 public class DialogueSystem : MonoBehaviour
 {
@@ -84,11 +85,11 @@ public class DialogueSystem : MonoBehaviour
     void Update()
     {
         // Allow clicking to skip typing or advance dialogue
-        if (Input.GetMouseButtonDown(0) && !isTyping)
+        if (Mouse.current.leftButton.wasPressedThisFrame && !isTyping)
         {
             NextLine();
         }
-        else if (Input.GetMouseButtonDown(0) && isTyping)
+        else if (Mouse.current.leftButton.wasPressedThisFrame && isTyping)
         {
             // Skip typing animation
             StopAllCoroutines();
