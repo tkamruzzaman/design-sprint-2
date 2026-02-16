@@ -41,7 +41,7 @@ public class Player : MonoBehaviour
         horizontalMove = moveInput.x;
         if (context.performed)
         {
-            Debug.Log($"{horizontalMove} MOVED!");
+            //Debug.Log($"{horizontalMove} MOVED!");
         }
     }
 
@@ -50,7 +50,7 @@ public class Player : MonoBehaviour
         if (context.performed)
         {
             isJumping = true;
-            print("DFDFHGKDHFGHKDH " + gameObject.name);
+            //print("DFDFHGKDHFGHKDH " + gameObject.name);
         }    
     }
     
