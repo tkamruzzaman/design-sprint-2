@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84e73883047ed4ec7b65dc58aff7c70f, type: 3}
+  m_Name: TestNPCDialogue
+  m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
+  npcName: TEST NPC
+  npcSprite: {fileID: 415012621, guid: 949c61b699433464ea09b307785f9fb6, type: 3}
+  dialogueLines:
+  - A test is a test! What is a test?
+  - ok you are right! Now Go away!
+  autoProgressLines: 0100
+  autoProgressDelay: 1.5
+  typingSpeed: 0.05
+  voiceSound: {fileID: 8300000, guid: 4fb747c399c034750a68c086d90a106e, type: 3}
+  voicePitch: 1
