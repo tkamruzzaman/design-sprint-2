@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -6,12 +7,15 @@ using UnityEngine.UI;
 public class NPC : MonoBehaviour, IInteractable
 {
    public NPCDialogue dialogueData;
-   public GameObject dialoguePanel;
-   public TMP_Text dialogueText, nameText;
-   public Image portraitImage;
+private DialogueController dialogueController;
 
    private int dialogueIndex;
    private bool isTyping, isDialogueActive;
+
+   private void Start()
+   {
+      dialogueController = DialogueController.Instance;
+   }
 
    public bool CanInteract()
    {
@@ -38,11 +42,9 @@ public class NPC : MonoBehaviour, IInteractable
    {
       isDialogueActive = true;
       dialogueIndex = 0;
-
-      nameText.SetText(dialogueData.npcName);
-      portraitImage.sprite = dialogueData.npcSprite;
-
-      dialoguePanel.SetActive(true);
+      
+      dialogueController.SetNPCInfo(dialogueData.npcName, dialogueData.npcSprite);
+      dialogueController.ShowDialogueUI(true);
 
       StartCoroutine(TypeLine());
    }
@@ -53,7 +55,8 @@ public class NPC : MonoBehaviour, IInteractable
       {
          //Skip typing animation and show the full line
          StopAllCoroutines();
-         dialogueText.SetText(dialogueData.dialogueLines[dialogueIndex]);
+
+         dialogueController.SetDialogueText(dialogueData.dialogueLines[dialogueIndex]);
          isTyping = false;
       }
       else if (++dialogueIndex < dialogueData.dialogueLines.Length)
@@ -70,11 +73,10 @@ public class NPC : MonoBehaviour, IInteractable
    IEnumerator TypeLine()
    {
       isTyping = true;
-      dialogueText.SetText("");
-
+      dialogueController.SetDialogueText("");
       foreach (char letter in dialogueData.dialogueLines[dialogueIndex])
       {
-         dialogueText.text += letter;
+         dialogueController.SetDialogueText(dialogueController.dialogueText.text += letter);
          //playSoundEffect
          yield return new WaitForSeconds(dialogueData.typingSpeed);
       }
@@ -92,7 +94,7 @@ public class NPC : MonoBehaviour, IInteractable
    {
       StopAllCoroutines();
       isDialogueActive = false;
-      dialogueText.SetText("");
-      dialoguePanel.SetActive(false);
+    dialogueController.SetDialogueText("");
+    dialogueController.ShowDialogueUI(false);
    }
 }

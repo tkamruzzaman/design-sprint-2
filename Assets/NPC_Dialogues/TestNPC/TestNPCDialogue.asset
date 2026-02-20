@@ -18,7 +18,12 @@ MonoBehaviour:
   - A test is a test! What is a test?
   - ok you are right! Now Go away!
   autoProgressLines: 0100
+  endDialogueLines: 00
   autoProgressDelay: 1.5
   typingSpeed: 0.05
   voiceSound: {fileID: 8300000, guid: 4fb747c399c034750a68c086d90a106e, type: 3}
   voicePitch: 1
+  choices:
+  - dialogueLineIndex: 0
+    choices: []
+    nextDialogueLineIndexes: 
